@@ -1,0 +1,119 @@
+body{
+    background-color:#2d3436;
+    height:200vh;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.js-timer{
+    font-size:30px;
+    color:rgba(0,0,0,0.5);
+    font-weight: 600;
+}
+
+.js-weather{
+    font-size: 20px;
+    color:whitesmoke;
+}
+
+@keyframes bgfade{
+    from{
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
+.bgs{
+    position: absolute;
+    height: 100%; width: 100%;
+    left: 0px; top: 0px;
+    z-index: -1;
+    animation: bgfade 0.5s linear;
+}
+#title{
+    display: flex;
+    position:relative;
+    background-color:ivory ;
+    height: 100px;
+    width: 70%;
+}
+
+#title .turtle{
+    position:absolute;
+    width:50px; height:50px;
+    font-size:15px; color:rgba(0,0,0,0.5);
+
+}
+
+.event{
+    background-color: teal;
+    opacity: 0.3;
+    height: 400px; width:400px;
+}
+
+.form,
+.greet,
+.js-todoform {
+    display: none;
+}
+.js-todoform input{
+    all:unset;
+    background-color: rgba(0,0,0,0.15);
+    width:300px; height: 50px;
+    border: 2px solid gray;
+    border-radius: 10px;
+    font-size: 30px;
+    font-weight: 600;
+}   
+.show{
+    display: block;
+}
+
+@keyframes td-fadein{
+    from{
+        opacity: 0;
+    } to{
+        opacity: 1;
+    }
+}
+
+form[class *= "tdlist__active"]{
+    display: block;
+    animation: td-fadein 1s ease-in;
+}
+
+.js-todolist button{
+    all:unset;
+    color:whitesmoke;
+    border:1px solid gray;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.js-todolist button:hover{
+    background-color: rgba(0,0,0,0.5);
+}
+
+.js-todolist button:active{
+    transform: scale(0.95);
+}
+
+.js-todolist li{
+    width:200px;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    color:rgba(0,0,0,0.5);
+    border-radius: 20px;
+    transition: 0.1s linear;
+}
+
+.js-todolist li:hover{
+    background-color: royalblue;
+    transform: scale(1.1);
+
+}
